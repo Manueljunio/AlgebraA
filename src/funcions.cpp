@@ -170,12 +170,12 @@ void Functions::DiscreteLogarithm(){
     cout << "Discrete Logarithm of 'a' module 'p' in base 'g' = " << ans << endl;
 }
 
-// Returns a factor of n
+// Return a factor of n
 ll Functions::PollardRho(ll n) {
     if(!(n&1)) return 2;
     auto start = chrono::high_resolution_clock::now();
 
-    ll x = 2, y = 2, c = rand()%1000 - 1;
+    ll x = 2, y = 2, c = rand()%10 - 1;
     ll d = 1;
     while(d==1) {
         x = (x*x+c)%n;
